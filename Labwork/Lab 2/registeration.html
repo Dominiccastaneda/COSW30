@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>Registration Form</title>
+        <style>
+          body {background-color: grey;}  
+          h1 {text-align: center; font-size: 60px; margin-top: 40px;}
+          footer {font-size: 2em; color: black; text-align: center; margin-top: 38%;}
+        </style>
+            
+    </head>
+    <body>
+
+        <h1>Registration Form</h1>
+        <p>Register Today</p>
+
+         <form action="process_registration.php" method="POST">
+             <lable for="first_name">First Name:</lable>
+             <input type="text" id="first_name" name="first_name" required>
+             <br><br>
+             <lable for="last_name">Last Name:</lable>
+             <input type="text" id="last_name" name="last_name" required>
+             <br><br>
+             <lable for="email">Email Address:</lable>
+             <input type="email" id="email" name="email" required>
+             <br><br>
+             <lable for="password">Password: </lable>
+             <input type="password" id="password" name="password" required>
+             <br><br>
+             <lable for="confirm_password">Confirm Password: </lable>
+             <input type="password" id="confirm_password" name="confirm_password" required>
+             <br><br>
+             
+             <button>Register!</button>
+
+
+         </form>
+        
+    </body>
+    
+    <footer>
+        <p>&copy; 2019 by Gaith Cattan & Dominic Castaneda</p>
+    </footer>
+
+</html>
