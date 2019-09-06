@@ -9,8 +9,8 @@
 //required fields: first name, last name, email, gender, age
 
             
-    if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['gender']) && !empty($_POST['age']))
-    {
+//    if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['gender']) && !empty($_POST['age']))
+//    {
 
    $first_name = $_POST['first_name'];
    $last_name = $_POST['last_name'];
@@ -42,9 +42,9 @@
         if (!null($_POST['mailing'])) {echo "<p>Mailing list: Yes</p>";} else {echo "<p>Mailing list: No</p>";} 
         echo "<p>Comments: $comment</p>";
 
-    }
-    else {
-        echo "<h2>Registration error, please try again</h2>";
-    }
+//    }
+//    else {
+//        echo "<h2>Registration error, please try again</h2>";
+//    }
 
 ?>
