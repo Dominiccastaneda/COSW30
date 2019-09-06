@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html>
+    <head>
+         <meta charset="utf-8">
+         <title>Contact Registration </title>
+        <style>
+          body {background-image: url(https://i.imgur.com/lnTiGfs.jpg);   background-repeat: no-repeat;   background-size: cover; color: red;   font-weight: bold;}  
+          h1 {text-align: center; font-size: 60px; margin-top: 60px;}
+          footer {font-size: 2em; color: black; text-align: center; margin-top: 38%;}
+        </style>
+            
+    </head>
+    <body>
+<!--  support fictional character as candidate 
+    fields: first name, last name; required
+            email; required
+            gender (3 options, drop-down); required
+            age range, 3 options, radio buttons; required
+            interests (6 checkboxes); optional
+            contribution ammount (default 0); optional
+            sign up for mailing list (checkbox, yes if checked; checked by default)
+            comments field; optional
+            submit button
+            
+    -->
+        <h1>Elect Cairne Bloodhoof for Warchief</h1>
+        <p>Show Your Support</p>
+
+
+
+         <form action="process_contact.php" method="POST">
+             <label for="first_name">First Name:</label>
+             <input type="text" id="first_name" name="first_name" required>  
+             <label for="last_name">Last Name:</label>
+             <input type="text" id="last_name" name="last_name" required>
+             <br><br>
+             <label for="email">Email Address:</label>
+             <input type="email" id="email" name="email" required>
+             <br><br>
+             <label for="gender">Gender</label>
+             <select required id="gender">
+                 <option value="male">Male</option>
+                 <option value="female">Female</option>
+                 <option value="alt">Bank Alt</option>
+             </select>
+             <br><br>
+            <label for="Age">Age</label>
+             <select required id="Age">
+                 <option value="Warcraft I">Warcraft I</option>
+                 <option value="Warcraft II">Warcraft II</option>
+                 <option value="Warcraft III">Warcraft III</option>
+                 </select>
+             <br><br>
+                 <label for="Interests">Class Interests:</label> <br>
+                  <input type="checkbox" name="class1" value="Druid">Druid <br>
+                  <input type="checkbox" name="class2" value="Hunter">Hunter <br>
+                  <input type="checkbox" name="class3" value="Mage">Mage <br>
+                  <input type="checkbox" name="class4" value="Priest">Priest <br>
+                  <input type="checkbox" name="class5" value="Rogue">Rogue <br>
+                  <input type="checkbox" name="class6" value="Shaman">Shaman <br>
+                  <input type="checkbox" name="class7" value="Warlock">Warlock <br>
+                  <input type="checkbox" name="class8" value="Warrior">Warrior <br>
+                <br><br>
+             <label for="Contribution">Contribution Amount (in Gold):</label>
+             <input type="number" id="Contribution" name="Contribution" value=0>
+              <br><br>
+                 <label for="Mailing">Would you like to join our Mailing List?</label> <br>
+                  <input type="checkbox" name="mailing" value="yes" checked>Yes<br>
+                <br>
+                <label for="Comment">Any comments or concerns?</label>
+                 <textarea rows="4" cols="50" name="Comment" ></textarea> <br> <br>
+               <button>Submit</button>
+  
+</form>
+
+             
+             
+             
+             
+             
+
+
+    </body>
+    
+    <footer>
+        <p>&copy; COSW30 Dominic Castaneda</p>
+    </footer>
+
+</html>
