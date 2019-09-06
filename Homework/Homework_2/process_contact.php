@@ -30,7 +30,7 @@
    $comment = $_POST['comment'];
 
  // confirmation message
-        echo '<h2>Thank you for registering</h2>';                     
+        echo '<h2>Thank You For Registering</h2>';                     
         echo "<p>First Name: $first_name</p>";
         echo "<p>Last Name: $last_name</p>";
         echo "<p>Email Address: $email</p>";
