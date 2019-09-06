@@ -36,10 +36,10 @@
         echo "<p>Email Address: $email</p>";
         echo "<p>Gender: $gender</p>";
         echo "<p>Age: $age</p>";
-        echo "<p>Interests:</p>";
+        echo "<p>Class Interests:</p>";
         echo "<p>$class1 $class2 $class3 $class4 $class5 $class6 $class7 $class8</p>";
         echo "<p>Contribution: $contribution</p>";
-        if ($_POST['mailing']=='yes') {echo "<p>Mailing list: Yes</p>";} else {echo "<p>Mailing list: No</p>";} ;
+        if ($mailing=='yes') {echo "<p>Mailing list: Yes</p>";} else {echo "<p>Mailing list: No</p>";} ;
         echo "<p>Comments: $comment</p>";
 
     }
