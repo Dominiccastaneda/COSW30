@@ -6,6 +6,22 @@ include ('database.php');
 *   NEW USER INTO THE DATABASE
 */
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $first_name=$POST['first_name'];
+    $last_name=$POST['last_name'];
+    $email=$POST['email'];
+    $password=$POST['password'];
+
+    $insert_query= "INSERT INTO USER_CASTANEDA (first_name, last_name, email, password)
+                    VALUES ($first_name, $last_name, $email, $password)";
+
+    $result = mysqli_query($connection, $insert_query);
+
+    if ($result){
+        echo 'New user added to the database';}
+        else {
+        echo 'Error entering new user';
+        }
+
 }
 /*
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
