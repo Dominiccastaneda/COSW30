@@ -18,10 +18,10 @@ $result = mysqli_query($connection, $query);
 
 // Check if the database returned anything
 if($result) {
-    while($rows = mysqli_fetch_array($result)){
+    while($rows = mysqli_fetch_all($result, MYSQLI_ASSOC));{
 
         // Output the results
-        // print_r($rows);
+         print_r($rows);
     }
 } else {
     // Output an error
@@ -69,10 +69,10 @@ if($result) {
         <?php
         foreach($row as $rows){
             echo '<tr>
-                <td>' .$row[1]. '</td>
-                <td>' .$row[2]. '</td>
-                <td>' .$row[3]. '</td>
-                <td>' .$row[4]. '</td>
+                <td>' .$row[' first_name ']. '</td>
+                <td>' .$row[' last_name ']. '</td>
+                <td>' .$row[' email ']. '</td>
+                <td>' .$row[' password ']. '</td>
 
             </tr>';
         }
