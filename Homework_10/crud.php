@@ -15,19 +15,24 @@ $query = 'SELECT * FROM USER_CASTANEDA
 ';
 // Run your query
 $result = mysqli_query($connection, $query);
+
 // Check if the database returned anything
 if($result) {
     while($row = mysqli_fetch_array($result)){
+
         // Output the results
+        print_r($row);
     }
 } else {
     // Output an error
+    echo 'failed';
 }
 ?>
 
 <!doctype html>
 <html>
 <head>
+
     <title>My First CRUD</title>
 </head>
 <body>
