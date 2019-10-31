@@ -68,10 +68,10 @@ if($result) {
         <?php
         foreach($rows as $row){
             echo '<tr>
-                <td>' .$row[' first_name ']. '</td>
-                <td>' .$row[' last_name ']. '</td>
-                <td>' .$row[' email ']. '</td>
-                <td>' .$row[' password ']. '</td>
+                <td>' .$row['first_name']. '</td>
+                <td>' .$row['last_name']. '</td>
+                <td>' .$row['email']. '</td>
+                <td>' .$row['password']. '</td>
 
             </tr>';
         }
