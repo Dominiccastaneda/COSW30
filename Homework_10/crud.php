@@ -11,18 +11,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 *   QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
 */
 // Create your query
-$query = 'SELECT * FROM USER_CASTANEDA
-';
+$query = 'SELECT * FROM USER_CASTANEDA';
 // Run your query
 $result = mysqli_query($connection, $query);
 
 // Check if the database returned anything
 if($result) {
-    while($rows = mysqli_fetch_all($result, MYSQLI_ASSOC));{
+    $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
         // Output the results
          print_r($rows);
-    }
+
 } else {
     // Output an error
     echo 'failed';
@@ -67,7 +66,7 @@ if($result) {
         </thead>
         <tbody>
         <?php
-        foreach($row as $rows){
+        foreach($rows as $row){
             echo '<tr>
                 <td>' .$row[' first_name ']. '</td>
                 <td>' .$row[' last_name ']. '</td>
