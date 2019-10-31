@@ -67,7 +67,7 @@ if($result) {
         </thead>
         <tbody>
         <?php
-        for each($row as $rows){
+        foreach($row as $rows){
             echo '<tr>
                 <td>' .$row[1]. '</td>
                 <td>' .$row[2]. '</td>
