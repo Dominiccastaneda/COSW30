@@ -18,10 +18,10 @@ $result = mysqli_query($connection, $query);
 
 // Check if the database returned anything
 if($result) {
-    while($row = mysqli_fetch_array($result)){
+    while($rows = mysqli_fetch_array($result)){
 
         // Output the results
-        print_r($row);
+        // print_r($rows);
     }
 } else {
     // Output an error
@@ -66,12 +66,18 @@ if($result) {
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+        <?php
+        for each($row as $rows){
+            echo '<tr>
+                <td>' .$row[1]. '</td>
+                <td>' .$row[2]. '</td>
+                <td>' .$row[3]. '</td>
+                <td>' .$row[4]. '</td>
+
+            </tr>';
+        }
+
+            ?>
         </tbody>
     </table>
 </body>
