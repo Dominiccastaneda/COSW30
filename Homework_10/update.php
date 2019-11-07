@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors= [];
     if (fails condition)[
         $errors[variablename] = 'error message';
-    ];
+        ];
     // If they aren't empty, create and run your query
     $update_query = "UPDATE USER_CASTANEDA
                     SET first_name = '$first_name',
@@ -49,12 +49,11 @@ if($result) {
     // If the database query was successful, store
     // the users information into a variable
     $user = mysqli_fetch_assoc($result);
-    print_r( $user;
-    $first_name = $user('first_name');
-    $last_name = $user('last_name');
-    $email = $user('email');
-    $password = $user('password');
-);
+    $first_name = $user['first_name'];
+    $last_name = $user['last_name'];
+    $email = $user['email'];
+    $password = $user['password'];
+
 
 } else {
     // Output an error message
@@ -76,7 +75,7 @@ if($result) {
         <input type="text" id="last_name" name="last_name" value="<?php echo $last_name;  ?> " placeholder="please enter your last name"><br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" value=<?php echo $email;  ?> " placeholder="please enter your email"><br>
+        <input type="email" id="email" name="email" value="<?php echo $email;  ?> " placeholder="please enter your email"><br>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" value="<?php echo $password;  ?> "placeholder="please enter your password"><br>
