@@ -1,5 +1,5 @@
 <?php
-include('includes/header.php');
+
 include('includes/database.php');
 // Check if the user is already logged in
 // If they are, redirect to welcome.php
@@ -9,16 +9,31 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     // Validate the form data
     // Check if the user's email and password are in the database
-    $query = "";
+    $query = "SELECT user_id, first_name
+                FROM USER_CASTANEDA
+                WHERE email = '$email'
+                AND password = '$password' ";
     $result = mysqli_query($connection, $query);
+
     // If they are, log them in
     if($result) {
+        $user = mysqli_fetch_assoc ($result);
         // Add their user id to the $_SESSION
+            $_SESSION['user_id'] = $user['user_id'];
+            $_SESSION['first_name'] = $user['first_name'];
+
+
+            print_r($user);
+            print_r($_SESSION);
         // Redirect to the welcome.php page
+
     // If they aren't, show the log in form with an error
     } else { 
     }
 } // END of $_SERVER['REQUEST_METHOD']
+
+
+include('includes/header.php');
 ?>
 
 <main class="container">
@@ -41,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         </form>
     </div>
 </div>
-
+<?php print_r($_SESSION); ?>
 </main>
 
 <?php include('includes/footer.php'); ?>

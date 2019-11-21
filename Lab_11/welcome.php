@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('includes/header.php');
 include('includes/database.php');
 // Check if the user is already logged in
@@ -7,7 +8,7 @@ include('includes/database.php');
 
 <main class="container">
 
-    <h1>You Logged In!</h1>
+    <h1>You Logged In! Hello <?php echo $_SESSION['first_name'] ?></h1>
 
     <h2>Here's a list of other users</h2>
 

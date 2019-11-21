@@ -11,14 +11,14 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <div class="container">
-        <a class="navbar-brand" href="#">Website Name</a>
+        <a class="navbar-brand" href="/Lab_11/welcome.php">Website Name</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/labwork/lab11/login.php">Login</a>
+                    <a class="nav-link" href="/Lab_11/login.php">Login</a>
                 </li>
                 <!-- Add logic to hide the Logout link if the user isn't logged in -->
                 <li class="nav-item">
