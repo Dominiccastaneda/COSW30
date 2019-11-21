@@ -18,7 +18,7 @@
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
             <!-- Add logic to hide the Logout link if the user isn't logged in -->
-            <?php if(ifset($_SESSION['user_id']])){
+            <?php if(isset($_SESSION['user_id']])){
                echo '<li class="nav-item active">
                     <a class="nav-link" href="/Labwork/Lab_11/login.php">Login</a>
                 </li>';}  else {
