@@ -1,8 +1,16 @@
 <?php
-
+session_start();
 include('includes/database.php');
+include('includes/header.php');
 // Check if the user is already logged in
-// If they are, redirect to welcome.php
+
+if(isset($_SESSION['user_id'])){
+    // If they are, redirect to welcome.php
+    header('Location: welcome.php');
+    exit; 
+}
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Grab values from the form inputs
     $email = $_POST['email'];
@@ -26,14 +34,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             print_r($user);
             print_r($_SESSION);
         // Redirect to the welcome.php page
-
+        header('location: welcome.php');
+        exit;
     // If they aren't, show the log in form with an error
     } else { 
-    }
+    echo 'error';}
 } // END of $_SERVER['REQUEST_METHOD']
 
 
-include('includes/header.php');
+
+
 ?>
 
 <main class="container">
