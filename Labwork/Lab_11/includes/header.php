@@ -11,22 +11,25 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <div class="container">
-        <a class="navbar-brand" href="/Labwork/Lab_11/welcome.php">Website Name</a>
+        <a class="navbar-brand" href="#">Website Name</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
             <ul class="navbar-nav mr-auto">
-            <!-- Add logic to hide the Logout link if the user isn't logged in -->
-            <?php if(isset($_SESSION['user_id']])){
-               echo '<li class="nav-item active">
-                    <a class="nav-link" href="/Labwork/Lab_11/login.php">Login</a>
-                </li>';}  else {
-                
-                echo '<li class="nav-item">
+            <?php if(!isset($_SESSION['user_id'])) {
+                echo'<li class="nav-item active">
+                <a class="nav-link" href="/Labwork/Lab_11/login.php">Login</a>
+                </li>';
+            } else {
+                // Add logic to hide the Logout link if the user isn't logged in
+                echo'<li class="nav-item">
                     <a class="nav-link" href="/Labwork/Lab_11/logout.php">Logout</a>
-                </li>';} 
+                    </li>';
+            }
                 ?>
+                
+                
             </ul>
         </div>
     </div>
